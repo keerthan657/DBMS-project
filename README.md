@@ -14,6 +14,12 @@ Project contributors:
 <br>
 
 ## Tools and Components
+<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" /> 
+<img src="https://img.shields.io/badge/Elastic_Search-005571?style=for-the-badge&logo=elasticsearch&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen"/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+<br>
 Backend - Flask and Flask_SQLAlchemy
 <br>
 Frontend - Flask, HTML and CSS
@@ -35,3 +41,6 @@ Enter either image path (PNG image specifically) which you want to recognize usi
 > python main.py
 <br>
 This runs the website on https://localhost:5000, and can then be used to access project functionalities.
+<br>
+Snapshots of outputs are provided in the output folder.
+Report and other DBMS works are included in the report folder.
