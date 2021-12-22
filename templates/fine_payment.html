@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fine Payment Portal</title>
+    <style>
+        .cont {
+          font-family: serif;
+          font-size: 24px;
+          margin: 30px;
+          width: 370px;
+          height: 70px;
+        }
+        .btn-bg {
+            background-color: #12F05B;
+        }
+        .btn-fg {
+            width:  100px;
+            height: 50px;
+        }
+        body {
+            background-color: #38ff98;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Fine payment portal</h1>
+    <h2> Enter your violation number </h2>
+    <!-- TODO: take violation number as input / vehicle number as input, and display all fines -->
+    <div class="cont">
+    <form action="/get_violations" method="POST">
+        <h3>Vehicle number</h3>
+        <input type="text" name="veh_num" placeholder="Enter vehicle number" />
+        <input type="submit" value="Search" class="button btn-bg" />
+    </form>
+    <br>
+    </div>
+    <!-- Now display missing vehicle database -->
+    {% if violations %}
+    {% for violation in violations %}
+    <div>
+        <p class="message">Violation type: {{ violation.violation_type }}</p>
+        <p class="message">Fine amount: {{ violation.fine_amt }}</p>
+        <p class="message">Violation date: {{ violation.date }}</p>
+        <p class="message">Violation time: {{ violation.time }}</p>
+        <p class="message">Fine paid: {{ violation.fine_paid }}</p>
+        <hr>
+        <br>
+    </div>
+    {% endfor %}
+    {% endif %}
+</body>
+
+</html>

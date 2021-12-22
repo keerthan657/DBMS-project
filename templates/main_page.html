@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Traffic Violaton System</title>
+	<style>
+		.cont {
+		  font-family: arial;
+		  font-size: 24px;
+		  margin: 30px;
+		  width: 370px;
+		  height: 70px;
+		}
+		.btn-bg {
+			background-color: #12F05B;
+		}
+        .btn-fg {
+            width:  100px;
+            height: 50px;
+        }
+		body {
+			background-color: #38ff98;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="bg">
+		Select your Role
+	</h1>
+	<div class="cont">
+	<form action='/select_public' method="POST">
+		<input type="text" name="p_username" placeholder="Enter public username" />
+		<input type="password" name="p_password" placeholder="Enter public password" />
+		<input type="submit" value="Public" class="button btn-bg" />
+	</form>
+	</div>
+	<br>
+	<div class="cont">
+	<form action='/select_td' method="POST">
+		<input type="text" name="t_username" placeholder="Enter transport department username" />
+		<input type="password" name="t_password" placeholder="Enter transport department password" />
+		<input type="submit" value="Transport Department" class="button btn-bg" />
+	</form>
+	</div>
+	{% if message %}
+	<h3>
+		Invalid combination!!!
+	</h3>
+	{% endif %}
+</body>
+
+</html>

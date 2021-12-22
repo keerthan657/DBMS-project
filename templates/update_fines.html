@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Traffic Violaton System - Update fines</title>
+    <style>
+        .cont {
+          font-family: serif;
+          font-size: 24px;
+          margin: 30px;
+          width: 370px;
+          height: 370px;
+        }
+        .btn-bg {
+            background-color: #12F05B;
+        }
+        .btn-fg {
+            width:  100px;
+            height: 50px;
+        }
+        body {
+            background-color: #38ff98;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Update fine amounts
+    </h1>
+    <div class="cont">
+    <form action='/update_fines1' method="POST">
+        <h3>Fine type</h3>
+        <input type="text" name="fine_type" placeholder="Enter type of violation" />
+        <h3>Fine amount</h3>
+        <input type="text" name="fine_amt" placeholder="Enter fine amount" />
+        <input type="submit" value="Update" class="button btn-bg" />
+    </form>
+    </div class="cont">
+    {% if message %}
+    <h3>Update successfull!!</h3>
+    {% endif %}
+</body>
+
+</html>

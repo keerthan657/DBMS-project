@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Role: Transport Department</title>
+    <style>
+        .cont {
+          font-family: arial;
+          font-size: 24px;
+          margin: 30px;
+          width: 370px;
+          height: 70px;
+        }
+        .btn-bg {
+            background-color: #12F05B;
+        }
+        .btn-fg {
+            width:  170px;
+            height: 50px;
+            margin:  10px;
+            padding:  10px 10px;
+        }
+        body {
+            background-color: #38ff98;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Select your choice
+    </h1>
+    <div class="cont">
+    <form action='/mv_report' method="POST">
+        <input type="submit" value="Missing Vehicles report" class="button btn-bg btn-fg" />
+    </form>
+    </div>
+    <div class="cont">
+    <form action='/viol_report' method="POST">
+        <input type="submit" value="Violations report" class="button btn-bg btn-fg" />
+    </form>
+    </div>
+    <div class="cont">
+    <form action='/update_fines' method="POST">
+        <input type="submit" value="Update fines" class="button btn-bg btn-fg" />
+    </form>
+    </div>
+</body>
+
+</html>

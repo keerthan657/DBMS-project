@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Traffic Violaton System - Missing vehicles report</title>
+    <style>
+        .cont {
+          font-family: serif;
+          font-size: 24px;
+          margin: 30px;
+          width: 370px;
+          height: 70px;
+        }
+        .btn-bg {
+            background-color: #12F05B;
+        }
+        .btn-fg {
+            width:  100px;
+            height: 50px;
+        }
+        body {
+            background-color: #38ff98;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Missing vehicles report
+    </h1>
+    <!-- TODO show missing missing vehicle table -->
+    {% if miss_entries %}
+    {% for entry in miss_entries %}
+    <div>
+        <h3>Vehicle number: {{entry.vehicle_num}}</h3>
+        <h3>Date of Missing: {{entry.date_of_missing}}</h3>
+        <h3>Place of Missing: {{entry.place_of_missing}}</h3>
+        <h3>Found: {{entry.is_found}}</h3>
+        <hr>
+        <br>
+    </div>
+    {% endfor %}
+    {% endif %}
+</body>
+
+</html>

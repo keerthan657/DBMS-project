@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Report missing vehicles</title>
+    <style>
+        .cont {
+          font-family: serif;
+          font-size: 24px;
+          margin: 30px;
+          width: 370px;
+          height: 370px;
+        }
+        .btn-bg {
+            background-color: #12F05B;
+        }
+        .btn-fg {
+            width:  100px;
+            height: 50px;
+        }
+        body {
+            background-color: #38ff98;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Report Missing Vehicles</h1>
+    <!-- TODO: take vehicle number, date of missing and place of missing
+                and have a submit button that updates accordingly in the database -->
+    <div class="cont">
+    <form action='/submit_missing' method="POST">
+        <h3>Vehicle number</h3>
+        <input type="text" name="veh_num" placeholder="Enter vehicle number" />
+        <h3>Date of missing</h3>
+        <input type="date" name="dom" placeholder="Enter date of missing" />
+        <h3>Place of missing</h3>
+        <input type="text" name="pom" placeholder="Enter place of missing" />
+        <input type="submit" value="Submit" class="button btn-bg" />
+    </form>
+    </div>
+    <br>
+    <div class="cont">
+    {% if message %}
+        <h3>Successfully Reported!!</h3>
+    {% endif %}
+    </div>
+</body>
+
+</html>

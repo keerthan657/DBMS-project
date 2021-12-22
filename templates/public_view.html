@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Role: Public</title>
+    <style>
+        .cont {
+          font-family: arial;
+          font-size: 24px;
+          margin: 30px;
+          width: 370px;
+          height: 70px;
+        }
+        .btn-bg {
+            background-color: #12F05B;
+        }
+        .btn-fg {
+            width:  170px;
+            height: 50px;
+            margin:  10px;
+            padding:  10px 10px;
+        }
+        body {
+            background-color: #38ff98;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Select your choice
+    </h1>
+    <div class="cont">
+    <form action='/pay_fine' method="POST">
+        <input type="submit" value="Pay fine" class="button btn-bg btn-fg" />
+    </form>
+    </div>
+    <div class="cont">
+    <form action='/report_missing' method="POST">
+        <input type="submit" value="Report missing vehicle" class="button btn-bg btn-fg" />
+    </form>
+    </div>
+</body>
+
+</html>
